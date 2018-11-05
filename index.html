@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+
+            //Get next previous date
+            Date.prototype.nextDay = function(){
+                var currentDate = this.getDate();
+                return new Date(this.setDate(currentDate + 1));
+            }
+
+            Date.prototype.previousDay = function(){
+                var currentDate = this.getDate();
+                return new Date(this.setDate(currentDate - 1));
+            }
+
+            var date = new Date();
+            console.log(date);
+            console.log(date.nextDay());
+            console.log(date.previousDay());
+
+
+            //Get reverse string 
+            String.prototype.reverse = function() {
+                return this.split('').reverse().join('');
+            }
+
+            var str = "ketan";
+            console.log(str.reverse());
+                
+        </script>
+    </body>
+</html>
